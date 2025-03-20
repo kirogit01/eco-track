@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './RegisterPage.css'
 import { RegisterApi } from '../services/api';
+import { storeUserData } from '../services/storage';
+import { isAuthenticated } from '../services/auth';
+import { Navigate } from 'react-router-dom';
 
 
 
@@ -35,6 +38,7 @@ export default function RegisterPage(){
         if (!hasError){
             setLoading(true)
             RegisterApi(inputs).then((response)=>{
+                storeUserData(response.data.idToken);
                 console.log(response);
             }).catch((err)=>{
                 console.log(err)
@@ -58,10 +62,18 @@ export default function RegisterPage(){
         setInputs({...inputs,[event.target.name]:event.target.value})
     }
 
+
+    if(isAuthenticated()){
+        //using navigation react-router-dom pakkage
+        return <Navigate to ="/dashboard"/>
+
+
+    }
+
    
     
     return (
-        <div>
+        
         
             <section className="register-block">
                 <div className="container">
@@ -121,7 +133,7 @@ export default function RegisterPage(){
                         </div>
                         <div className="clearfix"></div>
                         <div className="form-group">
-                        Already have account ? Please <a class="link-opacity-75" href="#">login</a>
+                        Already have account ? Please <a class="link-opacity-75" href='#'>login</a>
                         </div>
             
             
@@ -135,6 +147,6 @@ export default function RegisterPage(){
             
                 </div>
             </section>    
-        </div>
+        
         )
 }
