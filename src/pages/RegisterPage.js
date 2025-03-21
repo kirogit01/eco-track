@@ -3,7 +3,12 @@ import './RegisterPage.css'
 import { RegisterApi } from '../services/api';
 import { storeUserData } from '../services/storage';
 import { isAuthenticated } from '../services/auth';
-import { Navigate } from 'react-router-dom';
+
+
+
+
+
+
 
 
 
@@ -41,7 +46,13 @@ export default function RegisterPage(){
                 storeUserData(response.data.idToken);
                 console.log(response);
             }).catch((err)=>{
-                console.log(err)
+                if(err.response.data.error.message=="EMAIL_EXISTS" ){
+                    setErrors({...errors,custom_error:"Already this email has been registered!"});
+                }else if(String(err.response.data.error.message).includes('WEAK_PASSWORD')){
+                    setErrors({...errors,custom_error:"password should be at least 6 characters!"});
+
+                }
+
             }).finally(()=>{
                 setLoading(false)
             })
@@ -65,8 +76,9 @@ export default function RegisterPage(){
 
     if(isAuthenticated()){
         //using navigation react-router-dom pakkage
-        return <Navigate to ="/dashboard"/>
 
+        
+        
 
     }
 
@@ -129,11 +141,11 @@ export default function RegisterPage(){
                             </div>):null
                             }
             
-                            <input type="submit" className="btn btn-login float-right" disabled={loading}  value="Register" />
+                            <input type="submit"  className="btn btn-login float-right" disabled={loading}  value="Register" />
                         </div>
                         <div className="clearfix"></div>
                         <div className="form-group">
-                        Already have account ? Please <a class="link-opacity-75" href='#'>login</a>
+                        Already have account ? Please <a class="link-opacity-75" href='/LoginPage'>login</a>
                         </div>
             
             

@@ -8,6 +8,12 @@
     text-decoration: none;
     transition: 0.3s background-color;
 }
+
+#lobut{
+
+    margin-left:10px;
+}
+
 .login-button:hover{
     background-color:#00b383;
 }

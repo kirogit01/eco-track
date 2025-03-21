@@ -1,7 +1,7 @@
 import RegisterPage from "./pages/RegisterPage";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Home from "./pages/Home" ;
-
+import House from "./pages/House";
+import LoginPage from "./pages/LoginPage";
 
 
 
@@ -11,27 +11,23 @@ import Home from "./pages/Home" ;
 function App() {
   return (
     <div className="App">
-
       <BrowserRouter>
-          <Routes>
-             <Route path="/" element={<Home/>} />
-             <Route path="/register" element={<RegisterPage/>} />
+        <Routes>
+
+          <Route path="/register" element={<RegisterPage/>}/>
+          <Route path="/" element={<House/>}/>
+          <Route path="/LoginPage" element={ <LoginPage/>}/>
+
           
-             
-             
-
-             
-          </Routes>
-  
+          
+        </Routes>
+      
       </BrowserRouter>
-      
+  
+
 
       
-      
-      
-      
-      
-      
+    
     </div>
   );
 }

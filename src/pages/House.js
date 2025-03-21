@@ -1,11 +1,9 @@
 import React from 'react'
-import './Home.css'
+import './House.css'
 
-    
 
-function home() {
+function House() {
   return (
-
     <nav className="navbar navbar-expand-lg fixed-top">
     <div className="container-fluid">
      <a className="navbar-brand me-auto" href="#">Eco-Track</a>
@@ -31,15 +29,20 @@ function home() {
             </ul>
         </div>
       </div>
-      <a href="/register" className="login-button">login</a>
+      <a href="/LoginPage" className="login-button" >login</a>
+      <a href="/register" className="login-button" id='lobut'>Registor</a>
       <button className="navbar-toggler pe-8" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
+      <br/>
+      
+      
     </div>
   </nav>
     
 
   )
+  
 }
 
-export default home
+export default House
