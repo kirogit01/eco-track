@@ -3,7 +3,7 @@ import './RegisterPage.css'
 import { RegisterApi } from '../services/api';
 import { storeUserData } from '../services/storage';
 import { isAuthenticated } from '../services/auth';
-
+import { Navigate,Link } from 'react-router-dom';
 
 
 
@@ -75,10 +75,8 @@ export default function RegisterPage(){
 
 
     if(isAuthenticated()){
-        //using navigation react-router-dom pakkage
-
         
-        
+        return <Navigate to="/LoginPage" />
 
     }
 
@@ -145,7 +143,7 @@ export default function RegisterPage(){
                         </div>
                         <div className="clearfix"></div>
                         <div className="form-group">
-                        Already have account ? Please <a class="link-opacity-75" href='/LoginPage'>login</a>
+                        Already have account ? Pleasel <Link  to="/LoginPage">Login</Link>
                         </div>
             
             

@@ -2,6 +2,9 @@ import RegisterPage from "./pages/RegisterPage";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import House from "./pages/House";
 import LoginPage from "./pages/LoginPage";
+import DashBoard from "./pages/DashBoard";
+
+
 
 
 
@@ -17,6 +20,7 @@ function App() {
           <Route path="/register" element={<RegisterPage/>}/>
           <Route path="/" element={<House/>}/>
           <Route path="/LoginPage" element={ <LoginPage/>}/>
+          <Route path="/dashboard" element={<DashBoard/>}/>
 
           
           
