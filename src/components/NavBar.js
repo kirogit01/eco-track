@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { isAuthenticated } from '../services/auth'
 
-
+                                                                                                                                                                                                            
 function NavBar(props) {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">

@@ -1,0 +1,47 @@
+.emission-reduction-tips {
+    padding: 20px;
+    background-color: #e5f3e5;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .emission-reduction-tips h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .tips-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .tip-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tip-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .tip-item p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .tip-item a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .tip-item a:hover {
+    text-decoration: underline;
+  }
+  

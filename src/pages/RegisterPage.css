@@ -1,16 +1,18 @@
 .register-block{
-    float:left;
+    float:right;
     width:100%;
-    padding : 55px;
-    background-image:url("C:\Users\prm\OneDrive\Desktop\2nd-year\eco-track\src\new3.jpg");
+    
+
+    padding :100px;
+    background-image:url("C:\Users\prm\OneDrive\Desktop\2nd-year\eco-track\public\pic1.jpg");
     background-size: cover;
     
 }
 
 
 
-.container{background-color:powderblue; border-radius: 10px; width: 40%; height: 40%;}
-.register-sec{padding: 40px 30px; position:relative;}
-.register-sec h2{margin-bottom:20px; font-weight:800; font-size:30px; color: #0069c0;}
+.container{float: right;}
+.register-sec{padding: 30px 20px; position:relative;}
+.register-sec h2{margin-bottom:15px; font-weight:800; font-size:30px; color: #0069c0;}
 .register-sec h2:after{content:" "; width:100px; height:5px; background:#6ec6ff; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
-.btn-login{background: #0069c0; color:#fff; font-weight:600;}
+.btn-login{ font-weight:600;border-radius:20px;}

@@ -92,7 +92,7 @@ export default function RegisterPage(){
                         <h2 className="text-center">Register Now</h2>
                         <form onSubmit={handleSubmit} className="register-form" action="" >
                         <div className="form-group">
-                            <label htmlFor="exampleInputEmail1" className="text-uppercase">Name</label>
+                            <label htmlFor="exampleInputEmail1" className="text">FactoryName</label>
             
                             <input type="text" className="form-control" onChange={handleInput} name="name" id=""  />
                         { errors.name.required?
@@ -103,7 +103,7 @@ export default function RegisterPage(){
                         </div>
                         <br/>
                         <div className="form-group">
-                            <label htmlFor="exampleInputEmail1"  className="text-uppercase">Email</label>
+                            <label htmlFor="exampleInputEmail1"  className="text">FactoryEmail</label>
             
                             <input type="text"  className="form-control" onChange={handleInput} name="email" id=""  />
                             { errors.email.required?
@@ -114,7 +114,7 @@ export default function RegisterPage(){
                         </div>
                         <br/>
                         <div className="form-group">
-                            <label htmlFor="exampleInputPassword1" className="text-uppercase">Password</label>
+                            <label htmlFor="exampleInputPassword1" className="text">Password</label>
                             <input  className="form-control" type="password" onChange={handleInput}  name="password" id="" />
                             { errors.password.required?
                             (<span className="text-danger" >
@@ -139,11 +139,11 @@ export default function RegisterPage(){
                             </div>):null
                             }
             
-                            <input type="submit"  className="btn btn-login float-right" disabled={loading}  value="Register" />
+                            <input type="submit"  className="btn-primary btn-login float-right" disabled={loading}  value="Register" />
                         </div>
                         <div className="clearfix"></div>
                         <div className="form-group">
-                        Already have account ? Pleasel <Link  to="/LoginPage">Login</Link>
+                        Already have account ? Please <Link  to="/LoginPage">Login</Link>
                         </div>
             
             
